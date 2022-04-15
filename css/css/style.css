@@ -1,0 +1,403 @@
+/* spaces out the page */
+body{
+	padding: 20px;
+    margin: 20px;
+    background: url('../images/background-img.jpeg');
+    /*(Cursor image must be 32*32 px)*/
+    cursor: url('../images/cursor.png');
+    font-family: Raleway, sans-serif;
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+    /* 1em is 16px */
+    color: rgb(115, 36, 57);
+    padding: 30px;
+    margin: 10px;
+    text-align:center;
+    }
+
+/* Make the h2 heading match h1
+h2{
+	font-size: 30px;
+    margin: 20px;
+    padding: 20px;
+	font-weight: 500;
+} */
+
+h1#landscapes, h1#contact_h1, h1#baptism, h1#engagement, h1#portraits, h1#nature, h1#index_title {
+    font-family: 'Raleway', sans-serif;
+    font-size: xx-large;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:rgb(115, 36, 57);
+}
+#hello_word {
+    color:rgb(115, 36, 57);
+    font-weight: 300;
+    font-size: larger;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    text-align:justify;
+    padding-bottom: 20px;
+    font-size: large;
+    text-align: justify;
+}
+a {
+    color: rgb(170, 67, 95);
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+/* only changes the page youre currently on */
+.active{
+	background: rgb(245, 204, 215);
+    text-transform: uppercase;
+	text-align: left;
+    border-radius: 30px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.active a{
+    text-decoration-style: double;
+    font-family: Raleway, sans-serif;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+}
+/*Style the images*/
+img{
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.movingimage {
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    animation-name: myanimation;
+    animation-duration: 2s;
+}
+@keyframes myanimation {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-50px);
+    }
+  }
+  /* bounce on hover code */
+  .movingimage:hover {
+    animation-name: myanimation;
+    animation-duration: 3s;
+    animation:
+      bounce 300ms
+      alternate infinite
+      cubic-bezier(.2, .65, .6, 1);
+  }
+/* this line does not work */
+img:hover{
+    border-radius: 50px;
+    box-shadow: rgb(170, 67, 95) ;
+    -webkit-filter: none !important;
+    filter: none !important;
+}
+
+/* FLEX */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+nav li{
+	width: 100%;
+    background: rgb(170, 67, 95);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0px 20px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+.peoplegrid {
+    display: grid;
+    padding: 15px 20px 15px 20px;
+    grid-template-columns: 1fr 1fr;
+}
+/* heading and paragraph on the same line */
+#img1 {
+    grid-column: 1/span 1;
+    justify-items: center;
+    align-content: center;
+}
+#img2{
+    grid-column: 2/span 1;
+}
+
+#img3{
+    grid-column: 3/span 1;
+}
+
+h1 {
+    grid-row: 2/span 1;
+}
+p {
+    grid-row: 3/span 1;
+}
+#img4 {
+    grid-column: 4/span 1;
+}
+#img5{
+    grid-column: 5/span 1;
+}
+#img6{
+    grid-column: 6/span 1;
+}
+
+h1 {
+    grid-row: 5/span 1;
+}
+p {
+    grid-row: 6/span 1;
+}
+#img7 {
+    grid-column: 7/span 1;
+}
+#img8{
+    grid-column: 8/span 1;
+}
+
+#img9{
+    grid-column: 9/span 1;
+}
+
+h1 {
+    grid-row: 8/span 1;
+}
+p {
+    grid-row: 9/span 1;
+}
+
+#footertext {
+    font: 20px black;
+    font-family: 'Dawning of a New Day', cursive;
+}
+p#footertext {
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+footer {
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    background-color: rgb(175, 128, 141);
+}
+.fa-linkedin, .fa-instagram {
+    padding: 5px 0px 5px 0px;
+    background:none;
+    margin: 1%;
+    opacity: 1;
+}
+.fa-linkedin:hover {
+    background:none;
+    opacity: 0.5;
+}
+.fa-instagram:hover {
+    background:none;
+    opacity: 0.5;
+}
+/*Added this so the links stay the same color*/
+a:visited{color: rgb(38,38,28)}
+/* could use a different color */
+
+/* container in the contact.html */
+.contact{
+    font-size: 20px;
+    padding: 20px;
+    background: solid;
+    border-radius: 10px;
+    display: block;
+    row-gap: 50px;
+    text-align: stretch;
+    justify-content: space-between;
+  }
+  input[type="text" i] {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  input[type="email" i] {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  input[type="message" i] {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  input[type="submit" i] {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+    input[type="submit" i]:hover {
+        background: rgb(245, 204, 215);
+}
+#contact_container {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* tiles */
+.people_tiles {
+    background: white;
+    border-radius: 2px;
+    height: 210px;
+    width: 210px;
+    justify-items: center;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    background: url('../images/portrait1.jpeg');
+    justify-items: center;
+    /* padding: auto;
+    margin: auto; */
+    background-size: cover;
+    padding: 50px;
+    margin: 10px 0px 10px 0px;
+}
+
+.people_tiles:hover{
+    opacity: .5;
+}
+span{
+    font-size: larger;
+    font-weight:600;
+}
+.subtext  {
+    font-style: italic;
+    font-size: x-small;
+}
+
+#land {
+    background: white;
+    border-radius: 2px;
+    height: 210px;
+    width: 210px;
+    justify-items: center;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    background: url('../images/land2.jpeg');
+    justify-items: center;
+    /* padding: auto;
+    margin: auto; */
+    background-size: cover;
+    padding: 50px;
+    margin: 10px 0px 10px 0px;
+}
+.landscape_tiles:hover{
+    opacity: .5;
+}
+
+/* nature tile */
+#nature {
+    background: white;
+    color: white;
+    border-radius: 2px;
+    height: 210px;
+    width: 210px;
+    justify-items: center;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    background: url('../images/land3.jpeg');
+    justify-items: center;
+    /* padding: auto;
+    margin: auto; */
+    background-size: cover;
+    padding: 50px;
+    margin: 10px 0px 10px 0px;
+}
+.nature_tiles:hover{
+    opacity: .5;
+}
+
+div.people_tiles, div.nature_tiles, div.landscape_tiles {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.skip {
+      text-align: right;
+      font-size: 15px;
+      position: relative;
+      right: 500px;
+}
+
+  /* colors: rgb(115, 36, 57), rgb(38,38,28) */
+
+  /* start mobile view */
+/* @media screen and (max-width: 768px){
+    body {
+        margin: 5%;
+	    padding: 5%;
+	    font-size: 100% 'Anton', sans-serif;
+    }
+    header{
+      justify-content: center;
+      align-items: center;
+    }
+    nav li, a{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    nav li, a{
+      font-weight: 500;
+      text-transform: lowercase;
+      justify-items: center;
+    }
+    p {
+      font: white 20px;
+    }
+    footer{
+        background: white;
+    }
+} */
+
+/* @keyframes myanimation {
+    from {width: 25px; opacity: 0;}
+    to {width: 257px; opacity: 1;}
+} */
+  /* every 3rd image takes up one third of the column */
+  /* .grid:nth-child(2n){
+    /*  takes up one third of the column */
+    /* grid-column: 1/3;
+  } */
