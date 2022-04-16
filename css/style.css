@@ -17,13 +17,14 @@ h1{
     text-align:center;
 }
 
-h1#landscapes, h1#contact_h1, h1#baptism, h1#engagement, h1#portraits, h1#nature, h1#index_title {
+h1#landscapes, h1#contact_h1, h1#baptism, h1#engagement, h1#portraits, h1#nature{
     font-family: 'Raleway', sans-serif;
     font-size: xx-large;
     text-transform: uppercase;
     font-weight: 600;
     color:rgb(115, 36, 57);
 }
+
 #hello_word {
     color:rgb(115, 36, 57);
     font-weight: 300;
@@ -34,12 +35,16 @@ p {
     font-family: 'Raleway', sans-serif;
     color: black;
     text-align:justify;
+    padding-top: 20px;
     padding-bottom: 20px;
     font-size: large;
     text-align: justify;
 }
 a {
     color: black;
+}
+a#nature_redirect {
+    color: white;
 }
 
 a:-webkit-any-link {
@@ -70,9 +75,12 @@ img{
     filter: grayscale(100%);
 }
 
-.movingimage {
-    padding: 20px 0px 20px 0px;
-    width: 100%;
+h1#index_title {
+    font-family: 'Dawning of a New Day', cursive;
+    padding: 20px 20px 20px 20px;
+    width: 80%;
+    font-weight: 600;
+    font-size: 45px;
     animation-name: myanimation;
     animation-duration: 2s;
 }
@@ -81,24 +89,23 @@ img{
       transform: translateY(0px);
     }
     to {
-      transform: translateY(-50px);
+      transform: translateY(-20px);
     }
   }
-  /* bounce on hover code */
-  .movingimage:hover {
-    animation-name: myanimation;
-    animation-duration: 3s;
+  h1#index_title:hover {
+    animation-name: movingimage;
+    animation-duration: 1s;
     animation:
-      bounce 300ms
-      alternate infinite
-      cubic-bezier(.2, .65, .6, 1);
+      bounce 1s
+      /* alternate infinite */
+      cubic-bezier(.2, .65, .6, 3);
   }
-/* this line does not work */
+
 img:hover{
     border-radius: 50px;
-    box-shadow: rgb(170, 67, 95) ;
-    -webkit-filter: none !important;
-    filter: none !important;
+    box-shadow: rgb(88, 74, 78) ;
+    -webkit-filter:saturate(60%) !important;
+    filter:saturate(60%) !important;
 }
 
 /* FLEX */
@@ -273,7 +280,7 @@ a:visited{color: rgb(38,38,28)}
 .people_tiles:hover{
     opacity: .5;
 }
-span{
+span, a#nature_redirect, a#landscape_redirect, a#portraits_redirect{
     font-size: larger;
     font-weight:600;
 }
@@ -306,8 +313,7 @@ span{
 }
 
 /* nature tile */
-#nature {
-    background: white;
+.nature_tiles {
     border-radius: 2px;
     height: 210px;
     /* width: 210px; */
@@ -376,10 +382,7 @@ input {
     }
 } */
 
-/* @keyframes myanimation {
-    from {width: 25px; opacity: 0;}
-    to {width: 257px; opacity: 1;}
-} */
+
   /* every 3rd image takes up one third of the column */
   /* .grid:nth-child(2n){
     /*  takes up one third of the column */
