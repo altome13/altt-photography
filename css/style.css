@@ -1,6 +1,6 @@
 /* spaces out the page */
 body{
-	padding: 20px;
+	padding: 5px;
     margin: 20px;
     background: url('../images/background-img.jpeg');
     /*(Cursor image must be 32*32 px)*/
@@ -15,15 +15,7 @@ h1{
     padding: 30px;
     margin: 10px;
     text-align:center;
-    }
-
-/* Make the h2 heading match h1
-h2{
-	font-size: 30px;
-    margin: 20px;
-    padding: 20px;
-	font-weight: 500;
-} */
+}
 
 h1#landscapes, h1#contact_h1, h1#baptism, h1#engagement, h1#portraits, h1#nature, h1#index_title {
     font-family: 'Raleway', sans-serif;
@@ -47,7 +39,7 @@ p {
     text-align: justify;
 }
 a {
-    color: rgb(170, 67, 95);
+    color: black;
 }
 
 a:-webkit-any-link {
@@ -124,6 +116,10 @@ nav li{
     font-size: 20px;
     padding: 20px 0px 20px 0px;
     margin: 10px 0px 10px 0px;
+}
+
+li {
+    color: black;
 }
 
 .peoplegrid {
@@ -258,7 +254,7 @@ a:visited{color: rgb(38,38,28)}
     background: white;
     border-radius: 2px;
     height: 210px;
-    width: 210px;
+    /* width: 210px; */
     justify-items: center;
     text-align: center;
     vertical-align: middle;
@@ -267,10 +263,8 @@ a:visited{color: rgb(38,38,28)}
     border-radius: 8px;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    background: url('../images/portrait1.jpeg');
+    background: url(../images/portrait1.jpeg);
     justify-items: center;
-    /* padding: auto;
-    margin: auto; */
     background-size: cover;
     padding: 50px;
     margin: 10px 0px 10px 0px;
@@ -285,14 +279,14 @@ span{
 }
 .subtext  {
     font-style: italic;
-    font-size: x-small;
+    font-size: small;
 }
 
 #land {
     background: white;
     border-radius: 2px;
     height: 210px;
-    width: 210px;
+    /* width: 210px; */
     justify-items: center;
     text-align: center;
     vertical-align: middle;
@@ -303,8 +297,6 @@ span{
     font-family: 'Raleway', sans-serif;
     background: url('../images/land2.jpeg');
     justify-items: center;
-    /* padding: auto;
-    margin: auto; */
     background-size: cover;
     padding: 50px;
     margin: 10px 0px 10px 0px;
@@ -316,10 +308,9 @@ span{
 /* nature tile */
 #nature {
     background: white;
-    color: white;
     border-radius: 2px;
     height: 210px;
-    width: 210px;
+    /* width: 210px; */
     justify-items: center;
     text-align: center;
     vertical-align: middle;
@@ -330,19 +321,12 @@ span{
     font-family: 'Raleway', sans-serif;
     background: url('../images/land3.jpeg');
     justify-items: center;
-    /* padding: auto;
-    margin: auto; */
     background-size: cover;
     padding: 50px;
     margin: 10px 0px 10px 0px;
 }
 .nature_tiles:hover{
     opacity: .5;
-}
-
-div.people_tiles, div.nature_tiles, div.landscape_tiles {
-    padding-bottom: 20px;
-    padding-top: 20px;
 }
 
 input {
