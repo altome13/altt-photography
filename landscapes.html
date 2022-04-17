@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!--  TIP
 	You will find any errors from the head section using the console. -->
@@ -28,47 +29,68 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRMXV7NDME"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRMXV7NDME"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-DRMXV7NDME');
-</script>
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DRMXV7NDME');
+	</script>
 </head>
+
 <body>
-	<a class="skip" href ="#main">Skip to Main Content</a>
+	<a class="skip" href="#main">Skip to Main Content</a>
 	<header>
 		<nav>
 			<ul>
-				<li><a  href = "index.html" >Home</a></li>
-				<li><a href = "people.html">Portraits</a></li>
-				<li class="active"><a href = "landscapes.html">Landscapes</a></li>
-				<li><a href = "nature.html">Nature</a></li>
-				<li><a href = "contact.html">Contact Me</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="people.html">Portraits</a></li>
+				<li class="active"><a href="landscapes.html">Landscapes</a></li>
+				<li><a href="nature.html">Nature</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main class="landimg" id="main">
 		<!-- <h1>Breathe in, breathe out, take a look at nature.</h1> -->
-		<h1 id="landscapes">Landscapes</h1>
-		<p>There's something about photographing nature and landscapes that captures the feeling when I was present at the location. It's an indescribable feeling, but it is a feeling that can be felt by looking
-			at a photograph. Looking at these pictures, I reminisce the feelings and experience I had at those particular instances, and I hope it makes you feel like you were there with me, too.
-			This gallery incudes pictures from places I've lived in, visited recently, and photographs I may or may not be emotionally attached to. </p>
-		    <img src="images/land1.jpeg" alt="This is a picture of Iargo Springs in Oscoda Michigan during sunset. This view is down the stairs and near the springs in September."/>
-			<img src="images/land2.jpeg" alt="The perspective of San Francisco Alcatraz Island from a boat."/>
-			<img src="images/land5.jpeg" alt="A ferris wheel and some palm trees in front of the Japanese Garden in San Francisco."/>
-            <img src="images/land6.jpeg" alt="The view of the John Hancock Building in Chicago, IL in the downtown area."/>
-            <img src="images/land7.jpeg" alt="The perspective of San Francisco Boat Tour from a river boat tour."/>
-			<img src="images/contact1.png"
-            	alt="San Francisco Ghirardelli Square Boats"/>
-		</main>
+		<div class="landscapes_gallery_item">
+			<h1 id="landscapes">Landscapes</h1>
+			<details>
+				<summary>Why do I take pictures of landscapes?</summary>
+				<p id="landscapes_text">There's something about photographing nature and landscapes that captures the
+					feeling when I was present
+					at the location. It's an indescribable feeling, but it is a feeling that can be felt by looking
+					at a photograph. Looking at these pictures, I reminisce the feelings and experience I had at those
+					particular instances, and I hope it makes you feel like you were there with me, too.
+					This gallery incudes pictures from places I've lived in, visited recently, and photographs I may or
+					may
+					not be emotionally attached to.
+				</p>
+			</details>
+			<img src="images/land1.jpeg"
+				alt="This is a picture of Iargo Springs in Oscoda Michigan during sunset. This view is down the stairs and near the springs in September." />
+			<img src="images/land2.jpeg" alt="The perspective of San Francisco Alcatraz Island from a boat." />
+			<img src="images/land5.jpeg"
+				alt="A ferris wheel and some palm trees in front of the Japanese Garden in San Francisco." />
+			<img src="images/land6.jpeg"
+				alt="The view of the John Hancock Building in Chicago, IL in the downtown area." />
+			<img src="images/land7.jpeg" alt="The perspective of San Francisco Boat Tour from a river boat tour." />
+			<img src="images/contact1.png" alt="San Francisco Ghirardelli Square Boats." />
+			<img src="images/land8.jpeg" alt="Boat Tour to Alcatraz Island." />
+			<img src="images/land9.jpeg" alt="Farmers Market in Downtown San Francisco." />
+			<img src="images/land10.jpeg" alt="Candid photo of a mom and kid waiting for service at a pop up shop." />
+		</div>
+	</main>
 	<footer>
 		<p id="footertext">altt photography &copy; 2022</p>
 		<a target="_blank" href="https://linkedin.com/in/angelica-tome/" class="fa fa-linkedin"></a>
 		<a target="_blank" href="https://instagram.com/altt_photography/" class="fa fa-instagram"></a>
 	</footer>
 </body>
+
 </html>
