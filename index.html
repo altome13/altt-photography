@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>ALTT Photography</title>
 	<meta charset="UTF-8">
@@ -25,64 +26,75 @@
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> -->
-<!-- Global site tag (gtag.js) - Google Analytics | tag all webpages associated with this -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRMXV7NDME"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics | tag all webpages associated with this -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRMXV7NDME"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-DRMXV7NDME');
-</script>
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DRMXV7NDME');
+	</script>
 </head>
+
 <body>
-	<a class="skip" href ="#main">Skip to Main Content</a>	
-		<header>
+	<a class="skip" href="#main">Skip to Main Content</a>
+	<header>
 		<nav>
 			<ul class="header">
 				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href = "people.html">People Photography</a></li>
-				<li><a href = "landscapes.html">Landscapes & Nature Photography</a></li>
-				<li><a href = "contact.html">Contact Me</a></li>
+				<li><a href="people.html">Portraits</a></li>
+				<li><a href="landscapes.html">Landscapes</a></li>
+				<li><a href="nature.html">Nature</a></li>
+				<li><a href="contact.html">Contact Me</a></li>
 			</ul>
 		</nav>
-		</header>
+	</header>
 	<!-- Every page should have a main tag for accessibility -->
 	<main id="main">
 		<div class="thanks">
-		<h1 id="index_title">altt photography</h1>
-		<img class = "movingimage" src="images/selfportrait1.JPG" alt="A picture of Angelica sitting on a beach near the Japanese Garden in San Francisco, CA."/>
-		  <div class="box"></div>
-		  <p>Thank you for visiting my photography page. I am elated to showcase
+			<h1 id="index_title">altt photography</h1>
+			<img class="movingimage" src="images/selfportrait1.JPG"
+				alt="A picture of Angelica sitting on a beach near the Japanese Garden in San Francisco, CA." />
+			<div class="box"></div>
+			<p>Thank you for visiting my photography page. I am elated to showcase
 				the inner beauty of every day people and every day moments through the
 				art of photography. For any questions, comments, or inquiries refer to my
-				<a href = "contact.html">Contact Me</a> page.
+				<a href="contact.html">Contact Me</a> page.
 			</p>
 		</div>
 		<!-- Make sure your anchor tags have a link (href) and a clickable component -->
 		<div class="main_content">
-		<p><span id="hello_word">Hello! </span>My name is Angelica, and I am so excited you're here. I am currently based in Ann Arbor as a first-year Master's student in the School of Information at the University of Michigan.
-			During the summer, I am primarily based in Chicago. I use photography as an escape from the realities of the world. Through my photography, I aim to capture
-			the beauty of the subject(s) in an artistic and profound way to share a narrative. Each subject is different, and it is important
-			I encapsulate their uniqueness through the camera lens. My portfolio consists of a multitude of narratives including
-			personal portraits, nature, lanscape, and special occassions.
-		</p>
+			<p><span id="hello_word">Hello! </span>My name is Angelica, and I am so excited you're here. I am currently
+				based in Ann Arbor as a first-year Master's student in the School of Information at the University of
+				Michigan.
+				During the summer, I am primarily based in Chicago. I use photography as an escape from the realities of
+				the world. Through my photography, I aim to capture
+				the beauty of the subject(s) in an artistic and profound way to share a narrative. Each subject is
+				different, and it is important
+				I encapsulate their uniqueness through the camera lens. My portfolio consists of a multitude of
+				narratives including
+				personal portraits, nature, lanscape, and special occassions.
+			</p>
 		</div>
 		<!-- <div class="parent_tiles"> -->
-			<div class="people_tiles">
+		<div class="people_tiles" id="ppl">
 			<a id="portraits_redirect" target="_blank" href="people.html">PORTRAITS</a>
 			<div class="subtext">Explore the beauty of people</div>
-			</div>
-			
-			<div class="landscape_tiles" id="land">
+		</div>
+
+		<div class="landscape_tiles" id="land">
 			<a id="landscape_redirect" target="_blank" href="landscapes.html">LANDSCAPES</a>
 			<div class="subtext">Look at the sight</div>
-			</div>
+		</div>
 
-			<div class="nature_tiles">
+		<div class="nature_tiles" id="nat">
 			<a id="nature_redirect" target="_blank" href="landscapes.html">NATURE</a>
 			<div class="subtext">Spend time outside today</div>
-			</div>
+		</div>
 		<!-- </div> -->
 
 
@@ -96,4 +108,5 @@
 		<a target="_blank" href="https://instagram.com/altt_photography/" class="fa fa-instagram"></a>
 	</footer>
 </body>
+
 </html>
