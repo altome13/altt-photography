@@ -3,11 +3,9 @@ body {
     padding: 10px;
     margin: 10px;
     background: url('../images/background-img.jpeg');
-    /*(Cursor image must be 32*32 px)*/
     cursor: url('../cursors/cursor.svg'), pointer ;
     font-family: Raleway, sans-serif;
 }
-
 /*Make the h1 heading bigger with a bold font*/
 h1 {
     /* 1em is 16px */
@@ -28,6 +26,8 @@ h1#nature {
     text-transform: uppercase;
     font-weight: 600;
     color: rgb(115, 36, 57);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 #hello_word {
@@ -306,6 +306,11 @@ details {
     animation: open 1.5s ease-in-out;
   }
 
+summary {
+    text-align: center;
+    font-size: large;
+}
+
 .movingimage {
     width: 80%;
     height: 80%;
@@ -322,13 +327,20 @@ img#img1, img#img2, img#img3, img#img4, img#img5, img#img6, img#img7, img#img8, 
     width: 80%;
     height: 80%;
     gap: 30px;
-    padding-left: 35px;
-    padding-right: 35px;
     margin: 5px;
+}
+div.image {
+    text-align: center;
+}
+div.img:hover {
+    border-radius: 13px;
+    box-shadow: rgb(88, 74, 78) 0.3s;
+    opacity: .6;
 }
 img:hover {
     border-radius: 13px;
     box-shadow: rgb(88, 74, 78) 0.3s;
+    opacity: .8;
 }
 
 .landscapes_gallery_item {
