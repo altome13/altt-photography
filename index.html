@@ -57,8 +57,7 @@
 	<main id="main">
 		<div class="thanks">
 			<h1 id="index_title">altt photography</h1>
-			<img class="movingimage" src="images/selfportrait1.JPG"
-				alt="A picture of Angelica sitting on a beach near the Japanese Garden in San Francisco, CA." />
+
 			<div class="box"></div>
 			<p>Thank you for visiting my photography page. I am elated to showcase
 				the inner beauty of every day people and every day moments through the
@@ -66,19 +65,42 @@
 				<a href="contact.html">Contact Me</a> page.
 			</p>
 		</div>
+		<!--Angelica-->
+		<div class="flip_card">
+			<div class="flip_card_inner">
+				<div class="flip_card_front">
+					<img class="movingimage" src="images/selfportrait1.JPG"
+					alt="A picture of Angelica sitting on a beach near the Japanese Garden in San Francisco, CA." />					<h2>Angelica T.</h2>
+				</div>
+				<div class="flip_card_back">
+					<p class="flip_card_text">My name is Angelica, and I am so excited you're here.</p>
+				</div>
+			</div>
+		</div>
+
+
 		<!-- Make sure your anchor tags have a link (href) and a clickable component -->
 		<div class="main_content">
-			<p><span id="hello_word">Hello! </span>My name is Angelica, and I am so excited you're here. I am currently
-				based in Ann Arbor as a first-year Master's student in the School of Information at the University of
-				Michigan.
-				During the summer, I am primarily based in Chicago. I use photography as an escape from the realities of
-				the world. Through my photography, I aim to capture
-				the beauty of the subject(s) in an artistic and profound way to share a narrative. Each subject is
-				different, and it is important
-				I encapsulate their uniqueness through the camera lens. My portfolio consists of a multitude of
-				narratives including
-				personal portraits, nature, lanscape, and special occassions.
-			</p>
+			<p><span id="hello_word">Hello!</span></p>
+			<details>
+				<summary>
+					About Angelica
+				</summary>
+				<p>I am currently
+					based in Ann Arbor as a first-year Master's student in the School of Information at the
+					University of
+					Michigan.
+					During the summer, I am primarily based in Chicago. I use photography as an escape from the
+					realities of
+					the world. Through my photography, I aim to capture
+					the beauty of the subject(s) in an artistic and profound way to share a narrative. Each subject
+					is
+					different, and it is important
+					I encapsulate their uniqueness through the camera lens. My portfolio consists of a multitude of
+					narratives including
+					personal portraits, nature, lanscape, and special occassions.
+				</p>
+			</details>
 		</div>
 		<!-- <div class="parent_tiles"> -->
 		<div class="people_tiles" id="ppl">
@@ -104,8 +126,11 @@
 	<!-- Footer is a sematic tag page that aids readability -->
 	<footer>
 		<p id="footertext">altt photography &copy; 2022</p>
-		<a target="_blank" href="https://linkedin.com/in/angelica-tome/" class="fa fa-linkedin"></a>
-		<a target="_blank" href="https://instagram.com/altt_photography/" class="fa fa-instagram"></a>
+		<span id="fa_text">LinkedIn</span>
+		<a target="_blank" href="https://linkedin.com/in/angelica-tome/" class="fa fa-linkedin">.</a>
+		<span id="fa_text"></span>
+		<span id="fa_text">Instagram</span>
+		<a target="_blank" href="https://instagram.com/altt_photography/" class="fa fa-instagram">.</a>
 	</footer>
 </body>
 
