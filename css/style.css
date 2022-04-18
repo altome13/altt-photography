@@ -31,13 +31,6 @@ h1#nature {
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
-
-#hello_word {
-    color: rgb(115, 36, 57);
-    font-weight: 300;
-    font-size: larger;
-}
-
 p {
     font-family: 'Raleway', sans-serif;
     color: black;
@@ -94,7 +87,6 @@ a:-webkit-any-link {
 h1#index_title {
     font-family: 'Dawning of a New Day', cursive;
     padding: 20px 20px 20px 20px;
-    width: 80%;
     font-weight: 600;
     font-size: 45px;
     animation-name: indextitle_animation;
@@ -111,14 +103,10 @@ h1#index_title {
     }
 }
 
-/* h1#index_title:hover {
-    animation-name: movingimage;
-    animation-duration: 1s;
-    animation:
-        bounce 1s
-        alternate infinite
-        cubic-bezier(.2, .65, .6, 3);
-} */
+h1#index_title {
+    text-align: center;
+}
+
 
 /* FLEX */
 nav ul {
@@ -266,6 +254,14 @@ a#portraits_redirect {
 .landscape_tiles:hover {
     opacity: .8;
 }
+/* Flex for Nature page */
+.nature_gallery_images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding-bottom: 10px;
+}
 
 /* nature tile */
 #nat {
@@ -282,7 +278,7 @@ a#portraits_redirect {
     font-family: 'Raleway', sans-serif;
     background: url('../images/land3.jpeg');
     justify-items: center;
-    object-fit: cover;
+    background-size: cover;
     padding: 50px;
     margin: 10px 0px 10px 0px;
 }
@@ -290,7 +286,6 @@ a#portraits_redirect {
 .nature_tiles:hover {
     opacity: .8;
 }
-
 input {
     width: 100%;
     padding: 12px 20px;
@@ -310,7 +305,7 @@ input {
 details {
     /* cursor: pointer; */
     color: rgb(115, 36, 57);
-    padding: 5px;
+    padding-top: 30px;
     margin: 5px;
 }
 
@@ -420,55 +415,6 @@ p#landscapes_text {
     cursor: url('../cursors/camera.svg'), pointer;
 }
 
-/* people.html grid container */
-/* img#img1, img#img2, img#img3, img#img4, img#img5, img#img6, img#img7, img#img8, img#img9 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    height:30%;
-    width: 30%;
-    padding-left: 50%;
-    grid-gap: 10px;
-    margin-left: 50px;
-} */
-
-
-
-/* .people_container {
-    display: grid;
-    grid-template-columns: repeat(1 , 1fr);
-    grid-gap: 10px;
-} */
-/* img:hover {
-    border-radius: 20px;
-    box-shadow: rgb(88, 74, 78) 0.3s;
-}
-.gallery-item{
-    width: 50%;
-    height: 50%;
-    position: relative;
-}
-.gallery-item .image {
-    width: 50%;
-    height: 50%;
-    overflow: hidden;
-}
-.gallery-item .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    transition: .5s ease-in-out;
-}
-.gallery-item:hover .image img{
-    transform: scale(1.5);
-} */
-/* h1 headings in people.html will remain the headers */
-/* p#baptism {
-    font-size: 20px;
-} */
-
-
-
 #footertext {
     font: 35px black;
     font-family: 'Dawning of a New Day', cursive;
@@ -545,7 +491,7 @@ form {
 }
 
 .parallax>img {
-    max-width: 100%;
+    width: 50%;
     height: auto;
     visibility: hidden;
 }
@@ -563,7 +509,7 @@ form {
     background-color: rgb(221, 175, 25);
     width: 300px;
     height: 300px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding-top: 10px;
@@ -576,38 +522,365 @@ form {
     transition: transform 1s;
     transform-style: preserve-3d;
 }
-.flip_card:hover .flip_card_inner, .flip_card:focus-within .flip_card_inner {
+
+.flip_card:hover .flip_card_inner,
+.flip_card:focus,
+.flip_card:focus-within .flip_card_inner {
     transform: rotateY(180deg);
 }
 
-.flip_card_front, .flip_card_back {
+.flip_card_front,
+.flip_card_back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .flip_card_front {
     background-color: rgb(221, 175, 25);
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .flip_card_back {
-    display: flex;
-    flex-wrap: wrap;
+.flip_card_back {
     align-items: center;
     text-align: center;
     transform: rotateY(180deg);
-  }
+}
 
 /* ********************************
-********* PREFERS MOTION **********
+********* PREFERS REDUCED MOTION **********
+*********************************** */
+@media (prefers-reduced-motion) {
+    h1#index_title {
+        animation: none;
+    }
+
+    .movingimage {
+        transition: none;
+    }
+
+    .movingimage:hover {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+    #nat, #land, #ppl {
+        opacity: 1;
+        transform: none;
+    }
+
+    .flip_card:hover .flip_card_inner {
+        transform: none;
+    }
+
+    .flip_card:focus .flip_card_inner {
+        transform: none;
+    }
+
+    details[open] summary~* {
+        animation: none;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+    img:hover {
+        transform: none;
+        animation: none;
+        border-radius: 0;
+        opacity:1;
+    }
+}
+
+/* ********************************
+********* TABLET VIEW **********
 *********************************** */
 
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+    }
 
+    .parent_tiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #ppl {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: white;
+        border-radius: 2px;
+        height: 135px;
+        width: 135px;
+        justify-items: center;
+        text-align: center;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 8px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url(../images/portrait1.jpeg);
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .people_tiles:hover {
+        opacity: .8;
+    }
+
+    span,
+    a#nature_redirect,
+    a#landscape_redirect,
+    a#portraits_redirect {
+        font-size: larger;
+        font-weight: 600;
+        color: rgb(115, 36, 57);
+        background: white;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    #land {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background: white;
+        border-radius: 2px;
+        height: 135px;
+        width: 135px;
+        justify-items: center;
+        text-align: center;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 10px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url('../images/land2.jpeg');
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    /* nature tile */
+    #nat {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        border-radius: 2px;
+        height: 135px;
+        width: 135px;
+        align-items: center;
+        justify-items: center;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 8px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url('../images/land3.jpeg');
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .baptism_gallery_images {
+        cursor: url('../cursors/book.svg'), pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    img#img1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    img#img2 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    img#img3 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+
+    .engagement_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    img#img4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    img#img5 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    img#img6 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+
+    .portraits_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    img#img7 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    img#img8 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+
+    img#img9 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+
+    img#img10 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+
+    }
+
+    img#img11 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+
+    .landscapes_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+
+    .nature_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body{
+        padding: 50px;
+        margin:20px;
+    }
+    .parent_tiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #ppl {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: white;
+        border-radius: 2px;
+        height: 250px;
+        width: 250px;
+        justify-items: center;
+        text-align: center;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 8px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url(../images/portrait1.jpeg);
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    #land {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background: white;
+        border-radius: 2px;
+        height: 250px;
+        width: 250px;
+        justify-items: center;
+        text-align: center;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 10px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url('../images/land2.jpeg');
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    /* nature tile */
+    #nat {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        border-radius: 2px;
+        height: 250px;
+        width: 250px;
+        align-items: center;
+        justify-items: center;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: box-shadow 0.3s;
+        border-radius: 8px;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        background: url('../images/land3.jpeg');
+        justify-items: center;
+        background-size: cover;
+        padding: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+    #contact_container{
+        padding: 0px 300px 0px 300px;
+    }
+    p {
+        padding: 10px 200px 10px 200px;
+        text-align:center;
+    }
+
+    .landscapes_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+
+    .nature_gallery_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+}
 
 /* CODE I WANT TO USE LATER BELOW */
 /* details tag when open slides down from top */
@@ -626,47 +899,3 @@ form {
 /* tiles in desktop version */
 /* transition: .5s ease-in-out;
 transform: scale(1.3); */
-
-
-/* colors: rgb(115, 36, 57), rgb(38,38,28) */
-/* @media screen and (max-width: 1280px) {} */
-/* start mobile view */
-/* @media screen and (max-width: 768px){
-    body {
-        margin: 5%;
-	    padding: 5%;
-	    font-size: 100% 'Anton', sans-serif;
-    }
-    header{
-      justify-content: center;
-      align-items: center;
-    }
-    nav li, a{
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-    nav li, a{
-      font-weight: 500;
-      text-transform: lowercase;
-      justify-items: center;
-    }
-    p {
-      font: white 20px;
-    }
-    footer{
-        background: white;
-    }
-} */
-
-/* img#img1,
-img#img2,
-img#img3,
-img#img4,
-img#img5,
-img#img6 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 100px 300px;
-    grid-gap: 10px;
-} */
